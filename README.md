@@ -88,6 +88,9 @@ test:
 
 ## Release Notes
 
+### Version 0.1.3 
+Modified atomclip to metalcode-eu.
+
 ### Version 0.1.2
 Fixed typo in path to repository causing a wrong link in the marketplace.
 

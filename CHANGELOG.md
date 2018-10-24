@@ -1,28 +1,28 @@
-### Version 0.0.6
-Replaced toolchain with Version 7-2018-q2-update for macOS.
-Added a script symlink.sh to create symlinks to toolchain.
+### Version 0.1.3 
+Modified atomclip to metalcode-eu.
+
+### Version 0.1.2
+Fixed typo in path to repository causing a wrong link in the marketplace.
+
+Added a path to the libgcc files. 
+- arm-none-eabi.libgcc
+
+When you do bare metal development, you often exclude all standard libraries 
+but you still need libgcc.a for integer division etc. The path to this file 
+contains a version number that changes with every release of the toolchain. 
+Using this variable you do not need to update your makefiles with every new 
+release of the toolchain. 
+
+### Version 0.1.0
+Version 7-2018-q2-update for macOS
+Added ./symlink.sh to create symlinks in /usr/local/bin.
 
 ### Version 0.0.5
-The path separator punctiantion is a *colon :* in macOS and Linux and a 
-*semicolon ;* in Windows. To handle these operating system specific differences 
-I updated the tasks.json and added a simple makefile to test. You can use this 
-tasks.json and makefile to check your paths. 
+Operating system specific PATH environment variable. 
 
 ### Version 0.0.2
-Using the tilde in the paths had some problems during linking:
+Changed default paths, added GNU Make 3.81.
 
-~/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.1/bin
-
-~/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.1/arm-none-eabi/include
-
-~/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.1/lib
-
-Changed default paths:
-
-${env:HOME}/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.2/bin
-
-${env:HOME}/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.2/arm-none-eabi/include
-
-${env:HOME}/.vscode/extensions/atomclip.darwin-arm-none-eabi-0.0.2/lib
-
-Added GNU Make 3.81 to bin directory.
+### Version 0.0.1
+Version 7-2017-q4-major for macOS
+Released: December 18, 2017
