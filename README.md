@@ -88,7 +88,7 @@ test:
 
 ## Release Notes
 
-### Version 0.1.5 
+### Version 0.1.6 
 Version 8-2018-q4-major for macOS 
 Released: December 20, 2018
 
