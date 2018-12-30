@@ -1,3 +1,7 @@
+### Version 0.1.5 
+Version 8-2018-q4-major for macOS 
+Released: December 20, 2018
+
 ### Version 0.1.3 
 Modified atomclip to metalcode-eu.
 
