@@ -3,7 +3,7 @@
   "displayName": "darwin-arm-none-eabi",
   "description": "GNU Arm embedded toolchain for macOS",
   "icon": "images/gcc-darwin-128x128.png",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "preview": true,
   "publisher": "metalcode-eu",
   "engines": {
@@ -22,7 +22,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.6/bin",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/bin",
           "description": "The path to the GNU toolchain."
         },
         "arm-none-eabi.include": {
@@ -30,7 +30,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.6/arm-none-eabi/include",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/arm-none-eabi/include",
           "description": "The path to the GCC header files."
         },
         "arm-none-eabi.lib": {
@@ -38,7 +38,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.6/arm-none-eabi/lib",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/arm-none-eabi/lib",
           "description": "The path to the GCC library files."
         },
         "arm-none-eabi.libgcc": {
@@ -46,7 +46,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.6/lib/gcc/arm-none-eabi/8.2.1",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/lib/gcc/arm-none-eabi/8.2.1",
           "description": "The path to the libgcc files."
         }
       }
