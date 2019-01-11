@@ -89,7 +89,7 @@ test:
 ## Release Notes
 
 ### Version 0.1.7
-Added Open On-Chip Debugger 0.9.0 (2018-05-18-15:03)
+Added Open On-Chip Debugger 1.0 
 
 ### Version 0.1.6 
 Version 8-2018-q4-major for macOS 

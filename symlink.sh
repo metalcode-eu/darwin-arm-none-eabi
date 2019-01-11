@@ -18,4 +18,4 @@ ln -hfs ${TOOLCHAIN}/${CROSS}size     /usr/local/bin/${CROSS}size
 ln -hfs ${TOOLCHAIN}/${CROSS}readelf  /usr/local/bin/${CROSS}readelf
 ln -hfs ${TOOLCHAIN}/${CROSS}gdb      /usr/local/bin/${CROSS}gdb
 ln -hfs ${TOOLCHAIN}/make             /usr/local/bin/make
-ln -hfs ${TOOLCHAIN}/openocd          /usr/local/bin/openocd
+ln -hfs ${TOOLCHAIN}/openocd          /usr/local/openocd-1.0/bin/openocd
