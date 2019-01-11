@@ -56,6 +56,14 @@
           ],
           "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/openocd-1.0/bin/openocd",
           "description": "The path to the Open On-Chip Debugger."
+        },
+        "openocd.scripts": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.7/openocd-1.0/scripts",
+          "description": "The path to the Open On-Chip Debugger scripts directory."
         }
       }
     }

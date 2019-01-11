@@ -21,13 +21,15 @@ packaged for Visual Studio Code:
 In Visual Studio Code goto extensions (shift+cmd+x), search for '*metalcode-eu*' 
 and install the extension that is suited for your operating system. 
 
-The extension has four paths for the toolchain. You can use this in the 
+The extension has four paths for the toolchain. You can use them in the 
 tasks.json.
 
 - arm-none-eabi.bin
 - arm-none-eabi.include
 - arm-none-eabi.lib
 - arm-none-eabi.libgcc
+- openocd
+- openocd.scripts
 
 Here is an example of tasks.json for GNU make. 
 ```javascript
