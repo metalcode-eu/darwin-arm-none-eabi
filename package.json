@@ -48,22 +48,6 @@
           ],
           "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/lib/gcc/arm-none-eabi/8.3.1",
           "description": "The path to the libgcc files."
-        },
-        "openocd.bin": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/openocd-2.1/bin",
-          "description": "The path to the Open On-Chip Debugger."
-        },
-        "openocd.scripts": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/openocd-2.1/scripts",
-          "description": "The path to the Open On-Chip Debugger scripts directory."
         }
       }
     }
