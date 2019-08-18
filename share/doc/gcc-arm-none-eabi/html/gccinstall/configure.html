@@ -594,10 +594,20 @@ sysv, aix.
 <dt><code>--without-multilib-list</code></dt>
 <dd><p>Specify what multilibs to build.  <var>list</var> is a comma separated list of
 values, possibly consisting of a single value.  Currently only implemented
-for arm*-*-*, sh*-*-* and x86-64-*-linux*.  The accepted values and meaning
-for each target is given below.
+for aarch64*-*-*, arm*-*-*, sh*-*-* and x86-64-*-linux*.  The accepted
+alues and meaning for each target is given below.
 </p>
 <dl compact="compact">
+<dt><code>aarch64*-*-*</code></dt>
+<dd><p><var>list</var> is a comma separated list of <code>ilp32</code>, and <code>lp64</code>
+to enable ILP32 and LP64 run-time libraries, respectively.  If
+<var>list</var> is empty, then there will be no multilibs and only the
+default run-time library will be built.  If <var>list</var> is
+<code>default</code> or &ndash;with-multilib-list= is not specified, then the
+default set of libraries is selected based on the value of
+<samp>--target</samp>.
+</p>
+</dd>
 <dt><code>arm*-*-*</code></dt>
 <dd><p><var>list</var> is a comma separated list of <code>aprofile</code> and <code>rmprofile</code>
 to build multilibs for A or R and M architecture profiles respectively.  Note

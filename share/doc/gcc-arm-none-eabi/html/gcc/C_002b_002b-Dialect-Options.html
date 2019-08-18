@@ -842,7 +842,7 @@ void g() noexcept;
 void h() { f(g); } 
 </pre></div>
 
-<p>In C++14, <code>f</code> calls calls <code>f&lt;void(*)()&gt;</code>, but in
+<p>In C++14, <code>f</code> calls <code>f&lt;void(*)()&gt;</code>, but in
 C++17 it calls <code>f&lt;void(*)()noexcept&gt;</code>.
 </p>
 </dd>

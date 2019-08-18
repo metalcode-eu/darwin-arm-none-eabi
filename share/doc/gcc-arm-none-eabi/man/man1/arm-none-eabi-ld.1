@@ -133,7 +133,7 @@
 .\" ========================================================================
 .\"
 .IX Title "LD 1"
-.TH LD 1 "2018-12-16" "binutils-2.31.51" "GNU Development Tools"
+.TH LD 1 "2019-07-04" "binutils-2.32.0" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -829,7 +829,11 @@ Enabled by default.
 .IP "\fB\-\-trace\fR" 4
 .IX Item "--trace"
 .PD
-Print the names of the input files as \fBld\fR processes them.
+Print the names of the input files as \fBld\fR processes them.  If
+\&\fB\-t\fR is given twice then members within archives are also printed.
+\&\fB\-t\fR output is useful to generate a list of all the object files
+and scripts involved in linking, for example, when packaging files for
+a linker bug report.
 .IP "\fB\-T\fR \fIscriptfile\fR" 4
 .IX Item "-T scriptfile"
 .PD 0
@@ -2174,6 +2178,25 @@ links without the \fB\-\-wrap\fR option will succeed.  If you do this,
 you should not put the definition of \f(CW\*(C`_\|_real_malloc\*(C'\fR in the same
 file as \f(CW\*(C`_\|_wrap_malloc\*(C'\fR; if you do, the assembler may resolve the
 call before the linker has a chance to wrap it to \f(CW\*(C`malloc\*(C'\fR.
+.Sp
+Only undefined references are replaced by the linker.  So, translation unit
+internal references to \fIsymbol\fR are not resolved to
+\&\f(CW\*(C`_\|_wrap_\f(CIsymbol\f(CW\*(C'\fR.  In the next example, the call to \f(CW\*(C`f\*(C'\fR in
+\&\f(CW\*(C`g\*(C'\fR is not resolved to \f(CW\*(C`_\|_wrap_f\*(C'\fR.
+.Sp
+.Vb 5
+\&        int
+\&        f (void)
+\&        {
+\&          return 123;
+\&        }
+\&        
+\&        int
+\&        g (void)
+\&        {
+\&          return f();
+\&        }
+.Ve
 .IP "\fB\-\-eh\-frame\-hdr\fR" 4
 .IX Item "--eh-frame-hdr"
 .PD 0
@@ -2872,7 +2895,7 @@ the Info entries for \fIbinutils\fR and
 \&\fIld\fR.
 .SH "COPYRIGHT"
 .IX Header "COPYRIGHT"
-Copyright (c) 1991\-2018 Free Software Foundation, Inc.
+Copyright (c) 1991\-2019 Free Software Foundation, Inc.
 .PP
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the \s-1GNU\s0 Free Documentation License, Version 1.3

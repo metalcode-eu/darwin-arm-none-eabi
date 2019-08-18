@@ -84,18 +84,20 @@ Extended <code>asm</code> syntax uses colons (&lsquo;<samp>:</samp>&rsquo;) to d
 the operand parameters after the assembler template:
 </p>
 <div class="example">
-<pre class="example">asm <span class="roman">[</span>volatile<span class="roman">]</span> ( <var>AssemblerTemplate</var> 
+<pre class="example">asm <var>asm-qualifiers</var> ( <var>AssemblerTemplate</var> 
                  : <var>OutputOperands</var> 
                  <span class="roman">[</span> : <var>InputOperands</var>
                  <span class="roman">[</span> : <var>Clobbers</var> <span class="roman">]</span> <span class="roman">]</span>)
 
-asm <span class="roman">[</span>volatile<span class="roman">]</span> goto ( <var>AssemblerTemplate</var> 
+asm <var>asm-qualifiers</var> ( <var>AssemblerTemplate</var> 
                       : 
                       : <var>InputOperands</var>
                       : <var>Clobbers</var>
                       : <var>GotoLabels</var>)
 </pre></div>
-
+<p>where in the last form, <var>asm-qualifiers</var> contains <code>goto</code> (and in the
+first form, not).
+</p>
 <p>The <code>asm</code> keyword is a GNU extension.
 When writing code that can be compiled with <samp>-ansi</samp> and the
 various <samp>-std</samp> options, use <code>__asm__</code> instead of 
@@ -109,6 +111,11 @@ various <samp>-std</samp> options, use <code>__asm__</code> instead of
 values to produce output values. However, your <code>asm</code> statements may 
 also produce side effects. If so, you may need to use the <code>volatile</code> 
 qualifier to disable certain optimizations. See <a href="#Volatile">Volatile</a>.
+</p>
+</dd>
+<dt><code>inline</code></dt>
+<dd><p>If you use the <code>inline</code> qualifier, then for inlining purposes the size
+of the asm is taken as the smallest size possible (see <a href="Size-of-an-asm.html#Size-of-an-asm">Size of an asm</a>).
 </p>
 </dd>
 <dt><code>goto</code></dt>

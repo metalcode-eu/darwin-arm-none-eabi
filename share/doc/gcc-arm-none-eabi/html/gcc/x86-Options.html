@@ -937,6 +937,9 @@ preferred alignment to <samp>-mpreferred-stack-boundary=2</samp>.
 <dt><code>-mclflushopt</code></dt>
 <dd><a name="index-mclflushopt"></a>
 </dd>
+<dt><code>-mclwb</code></dt>
+<dd><a name="index-mclwb"></a>
+</dd>
 <dt><code>-mfsgsbase</code></dt>
 <dd><a name="index-mfsgsbase"></a>
 </dd>
@@ -958,8 +961,20 @@ preferred alignment to <samp>-mpreferred-stack-boundary=2</samp>.
 <dt><code>-mfma4</code></dt>
 <dd><a name="index-mfma4"></a>
 </dd>
+<dt><code>-mprfchw</code></dt>
+<dd><a name="index-mprfchw"></a>
+</dd>
+<dt><code>-mrdpid</code></dt>
+<dd><a name="index-mrdpid"></a>
+</dd>
 <dt><code>-mprefetchwt1</code></dt>
 <dd><a name="index-mprefetchwt1"></a>
+</dd>
+<dt><code>-mrdseed</code></dt>
+<dd><a name="index-mrdseed"></a>
+</dd>
+<dt><code>-msgx</code></dt>
+<dd><a name="index-msgx"></a>
 </dd>
 <dt><code>-mxop</code></dt>
 <dd><a name="index-mxop"></a>
@@ -979,10 +994,15 @@ preferred alignment to <samp>-mpreferred-stack-boundary=2</samp>.
 <dt><code>-mabm</code></dt>
 <dd><a name="index-mabm"></a>
 </dd>
+<dt><code>-madx</code></dt>
+<dd><a name="index-madx"></a>
+</dd>
 <dt><code>-mbmi</code></dt>
 <dd><a name="index-mbmi"></a>
 </dd>
 <dt><code>-mbmi2</code></dt>
+<dd><a name="index-mbmi2"></a>
+</dd>
 <dt><code>-mlzcnt</code></dt>
 <dd><a name="index-mlzcnt"></a>
 </dd>
@@ -1003,6 +1023,9 @@ preferred alignment to <samp>-mpreferred-stack-boundary=2</samp>.
 </dd>
 <dt><code>-mrtm</code></dt>
 <dd><a name="index-mrtm"></a>
+</dd>
+<dt><code>-mhle</code></dt>
+<dd><a name="index-mhle"></a>
 </dd>
 <dt><code>-mtbm</code></dt>
 <dd><a name="index-mtbm"></a>
@@ -1042,15 +1065,26 @@ preferred alignment to <samp>-mpreferred-stack-boundary=2</samp>.
 </dd>
 <dt><code>-mavx512vpopcntdq</code></dt>
 <dd><a name="index-mavx512vpopcntdq"></a>
+</dd>
+<dt><code>-mavx5124fmaps</code></dt>
+<dd><a name="index-mavx5124fmaps"></a>
+</dd>
+<dt><code>-mavx512vnni</code></dt>
+<dd><a name="index-mavx512vnni"></a>
+</dd>
+<dt><code>-mavx5124vnniw</code></dt>
+<dd><a name="index-mavx5124vnniw"></a>
 <p>These switches enable the use of instructions in the MMX, SSE,
-SSE2, SSE3, SSSE3, SSE4.1, AVX, AVX2, AVX512F, AVX512PF, AVX512ER, AVX512CD,
-SHA, AES, PCLMUL, FSGSBASE, RDRND, F16C, FMA, SSE4A, FMA4, XOP, LWP, ABM,
-AVX512VL, AVX512BW, AVX512DQ, AVX512IFMA, AVX512VBMI, BMI, BMI2, VAES,
-FXSR, XSAVE, XSAVEOPT, LZCNT, RTM, MPX, MWAITX, PKU, IBT, SHSTK, AVX512VBMI2,
-GFNI, VPCLMULQDQ, AVX512BITALG, MOVDIRI, MOVDIR64B,
-AVX512VPOPCNTDQ3DNow! or enhanced 3DNow! extended instruction sets.
-Each has a corresponding <samp>-mno-</samp> option to disable use of these
-instructions.
+SSE2, SSE3, SSSE3, SSE4, SSE4A, SSE4.1, SSE4.2, AVX, AVX2, AVX512F, AVX512PF,
+AVX512ER, AVX512CD, AVX512VL, AVX512BW, AVX512DQ, AVX512IFMA, AVX512VBMI, SHA,
+AES, PCLMUL, CLFLUSHOPT, CLWB, FSGSBASE, RDRND, F16C, FMA, PCONFIG,
+WBNOINVD, FMA4, PREFETCHW, RDPID, PREFETCHWT1, RDSEED, SGX, XOP, LWP,
+3DNow!, enhanced 3DNow!, POPCNT, ABM, ADX, BMI, BMI2, LZCNT, FXSR, XSAVE,
+XSAVEOPT, XSAVEC, XSAVES, RTM, HLE, TBM, MPX, MWAITX, CLZERO, PKU, AVX512VBMI2,
+GFNI, VAES, VPCLMULQDQ, AVX512BITALG, MOVDIRI, MOVDIR64B,
+AVX512VPOPCNTDQ, AVX5124FMAPS, AVX512VNNI, or AVX5124VNNIW
+extended instruction sets.  Each has a corresponding <samp>-mno-</samp> option to
+disable use of these instructions.
 </p>
 <p>These extensions are also available as built-in functions: see
 <a href="x86-Built_002din-Functions.html#x86-Built_002din-Functions">x86 Built-in Functions</a>, for details of the functions enabled and
@@ -1265,11 +1299,11 @@ To use this option, both <samp>-ftree-vectorize</samp> and
 ABI-compatible library must be specified at link time.
 </p>
 <p>GCC currently emits calls to <code>vmldExp2</code>,
-<code>vmldLn2</code>, <code>vmldLog102</code>, <code>vmldLog102</code>, <code>vmldPow2</code>,
+<code>vmldLn2</code>, <code>vmldLog102</code>, <code>vmldPow2</code>,
 <code>vmldTanh2</code>, <code>vmldTan2</code>, <code>vmldAtan2</code>, <code>vmldAtanh2</code>,
 <code>vmldCbrt2</code>, <code>vmldSinh2</code>, <code>vmldSin2</code>, <code>vmldAsinh2</code>,
 <code>vmldAsin2</code>, <code>vmldCosh2</code>, <code>vmldCos2</code>, <code>vmldAcosh2</code>,
-<code>vmldAcos2</code>, <code>vmlsExp4</code>, <code>vmlsLn4</code>, <code>vmlsLog104</code>,
+<code>vmldAcos2</code>, <code>vmlsExp4</code>, <code>vmlsLn4</code>,
 <code>vmlsLog104</code>, <code>vmlsPow4</code>, <code>vmlsTanh4</code>, <code>vmlsTan4</code>,
 <code>vmlsAtan4</code>, <code>vmlsAtanh4</code>, <code>vmlsCbrt4</code>, <code>vmlsSinh4</code>,
 <code>vmlsSin4</code>, <code>vmlsAsinh4</code>, <code>vmlsAsin4</code>, <code>vmlsCosh4</code>,

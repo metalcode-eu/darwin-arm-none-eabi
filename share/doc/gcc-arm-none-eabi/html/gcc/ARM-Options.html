@@ -256,6 +256,14 @@ ARMv7-R architectures.
 </dd>
 <dt>&lsquo;<samp>armv7-a</samp>&rsquo;</dt>
 <dd><dl compact="compact">
+<dt>&lsquo;<samp>+mp</samp>&rsquo;</dt>
+<dd><p>The multiprocessing extension.
+</p>
+</dd>
+<dt>&lsquo;<samp>+sec</samp>&rsquo;</dt>
+<dd><p>The security extension.
+</p>
+</dd>
 <dt>&lsquo;<samp>+fp</samp>&rsquo;</dt>
 <dd><p>The VFPv3 floating-point instructions, with 16 double-precision
 registers.  The extension &lsquo;<samp>+vfpv3-d16</samp>&rsquo; can be used as an alias
@@ -495,6 +503,16 @@ floating-point instructions as well as the Dot Product extension.
 The extension +vfpv3-d16 can be used as an alias for this extension.
 </p>
 </dd>
+<dt>&lsquo;<samp>+vfpv3xd-d16-fp16</samp>&rsquo;</dt>
+<dd><p>The single-precision VFPv3 floating-point instructions with 16 double-precision
+registers and the half-precision floating-point conversion operations.
+</p>
+</dd>
+<dt>&lsquo;<samp>+vfpv3-d16-fp16</samp>&rsquo;</dt>
+<dd><p>The VFPv3 floating-point instructions, with 16 double-precision
+registers and the half-precision floating-point conversion operations.
+</p>
+</dd>
 <dt>&lsquo;<samp>+nofp</samp>&rsquo;</dt>
 <dd><p>Disable the floating-point extension.
 </p>
@@ -708,7 +726,8 @@ Disables the floating-point and SIMD instructions on
 </dd>
 <dt>&lsquo;<samp>+nofp.dp</samp>&rsquo;</dt>
 <dd><p>Disables the double-precision component of the floating-point instructions
-on &lsquo;<samp>cortex-r5</samp>&rsquo;, &lsquo;<samp>cortex-r52</samp>&rsquo; and &lsquo;<samp>cortex-m7</samp>&rsquo;.
+on &lsquo;<samp>cortex-r5</samp>&rsquo;, &lsquo;<samp>cortex-r7</samp>&rsquo;, &lsquo;<samp>cortex-r8</samp>&rsquo;, &lsquo;<samp>cortex-r52</samp>&rsquo; and
+&lsquo;<samp>cortex-m7</samp>&rsquo;.
 </p>
 </dd>
 <dt>&lsquo;<samp>+nosimd</samp>&rsquo;</dt>
@@ -729,11 +748,11 @@ and &lsquo;<samp>cortex-a9</samp>&rsquo;.
 
 <p>Additionally the &lsquo;<samp>generic-armv7-a</samp>&rsquo; pseudo target defaults to
 VFPv3 with 16 double-precision registers.  It supports the following
-extension options: &lsquo;<samp>vfpv3-d16</samp>&rsquo;, &lsquo;<samp>vfpv3</samp>&rsquo;,
-&lsquo;<samp>vfpv3-d16-fp16</samp>&rsquo;, &lsquo;<samp>vfpv3-fp16</samp>&rsquo;, &lsquo;<samp>vfpv4-d16</samp>&rsquo;,
-&lsquo;<samp>vfpv4</samp>&rsquo;, &lsquo;<samp>neon</samp>&rsquo;, &lsquo;<samp>neon-vfpv3</samp>&rsquo;, &lsquo;<samp>neon-fp16</samp>&rsquo;,
-&lsquo;<samp>neon-vfpv4</samp>&rsquo;.  The meanings are the same as for the extensions to
-<samp>-march=armv7-a</samp>.
+extension options: &lsquo;<samp>mp</samp>&rsquo;, &lsquo;<samp>sec</samp>&rsquo;, &lsquo;<samp>vfpv3-d16</samp>&rsquo;,
+&lsquo;<samp>vfpv3</samp>&rsquo;, &lsquo;<samp>vfpv3-d16-fp16</samp>&rsquo;, &lsquo;<samp>vfpv3-fp16</samp>&rsquo;,
+&lsquo;<samp>vfpv4-d16</samp>&rsquo;, &lsquo;<samp>vfpv4</samp>&rsquo;, &lsquo;<samp>neon</samp>&rsquo;, &lsquo;<samp>neon-vfpv3</samp>&rsquo;,
+&lsquo;<samp>neon-fp16</samp>&rsquo;, &lsquo;<samp>neon-vfpv4</samp>&rsquo;.  The meanings are the same as for
+the extensions to <samp>-march=armv7-a</samp>.
 </p>
 <p><samp>-mcpu=generic-<var>arch</var></samp> is also permissible, and is
 equivalent to <samp>-march=<var>arch</var> -mtune=generic-<var>arch</var></samp>.

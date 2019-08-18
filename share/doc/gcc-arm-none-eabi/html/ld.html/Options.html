@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- This file documents the GNU linker LD
-(GNU Tools for Arm Embedded Processors 8-2018-q4-major)
-version 2.31.51.
+(GNU Tools for Arm Embedded Processors 8-2019-q3-update)
+version 2.32.0.
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -800,7 +800,11 @@ Enabled by default.
 </dd>
 <dt><code>-t</code></dt>
 <dt><code>--trace</code></dt>
-<dd><p>Print the names of the input files as <code>ld</code> processes them.
+<dd><p>Print the names of the input files as <code>ld</code> processes them.  If
+&lsquo;<samp>-t</samp>&rsquo; is given twice then members within archives are also printed.
+&lsquo;<samp>-t</samp>&rsquo; output is useful to generate a list of all the object files
+and scripts involved in linking, for example, when packaging files for
+a linker bug report.
 </p>
 <a name="index-_002dT-script"></a>
 <a name="index-_002d_002dscript_003dscript"></a>
@@ -2335,6 +2339,25 @@ you should not put the definition of <code>__real_malloc</code> in the same
 file as <code>__wrap_malloc</code>; if you do, the assembler may resolve the
 call before the linker has a chance to wrap it to <code>malloc</code>.
 </p>
+<p>Only undefined references are replaced by the linker.  So, translation unit
+internal references to <var>symbol</var> are not resolved to
+<code>__wrap_<var>symbol</var></code>.  In the next example, the call to <code>f</code> in
+<code>g</code> is not resolved to <code>__wrap_f</code>.
+</p>
+<div class="smallexample">
+<pre class="smallexample">int
+f (void)
+{
+  return 123;
+}
+
+int
+g (void)
+{
+  return f();
+}
+</pre></div>
+
 <a name="index-_002d_002deh_002dframe_002dhdr"></a>
 <a name="index-_002d_002dno_002deh_002dframe_002dhdr"></a>
 </dd>

@@ -1,5 +1,5 @@
 /* Script for -z combreloc: combine and sort reloc sections */
-/* Copyright (C) 2014-2018 Free Software Foundation, Inc.
+/* Copyright (C) 2014-2019 Free Software Foundation, Inc.
    Copying and distribution of this script, with or without modification,
    are permitted in any medium without royalty provided the copyright
    notice and this notice are preserved.  */
@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littlearm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("=/tmp/jenkins-GCC-8-build-toolchain-mac_cluster-128_20181216_1544945247/install-native/arm-none-eabi/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
+SEARCH_DIR("=/tmp/jenkins-GCC-8-build-toolchain-mac_LSF-72_20190704_1562200948/install-native/arm-none-eabi/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */

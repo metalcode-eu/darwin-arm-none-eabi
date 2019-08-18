@@ -255,16 +255,18 @@ results.  This is the default.
 <dt><code>-Os</code></dt>
 <dd><a name="index-Os"></a>
 <p>Optimize for size.  <samp>-Os</samp> enables all <samp>-O2</samp> optimizations that
-do not typically increase code size.  It also performs further
-optimizations designed to reduce code size.
+do not typically increase code size.
 </p>
 <p><samp>-Os</samp> disables the following optimization flags:
 </p><div class="smallexample">
 <pre class="smallexample">-falign-functions  -falign-jumps  -falign-loops 
--falign-labels  -freorder-blocks  -freorder-blocks-algorithm=stc 
--freorder-blocks-and-partition  -fprefetch-loop-arrays
+-falign-labels  -fprefetch-loop-arrays
 </pre></div>
 
+<p>It also enables <samp>-finline-functions</samp>, causes the compiler to tune for
+code size rather than execution speed, and performs further optimizations
+designed to reduce code size.
+</p>
 </dd>
 <dt><code>-Ofast</code></dt>
 <dd><a name="index-Ofast"></a>
@@ -396,7 +398,8 @@ time thanks to previous inlining.  This option has any effect only
 when inlining itself is turned on by the <samp>-finline-functions</samp>
 or <samp>-finline-small-functions</samp> options.
 </p>
-<p>Enabled at levels <samp>-O2</samp>, <samp>-O3</samp>, <samp>-Os</samp>.
+<p>Enabled at levels <samp>-O3</samp>, <samp>-Os</samp>.  Also enabled
+by <samp>-fprofile-use</samp> and <samp>-fauto-profile</samp>.
 </p>
 </dd>
 <dt><code>-finline-functions</code></dt>
@@ -2230,7 +2233,7 @@ for LTO, use <code>gcc-ar</code> and <code>gcc-ranlib</code> instead of <code>ar
 and <code>ranlib</code>; 
 to show the symbols of object files with GIMPLE bytecode, use
 <code>gcc-nm</code>.  Those commands require that <code>ar</code>, <code>ranlib</code>
-and <code>nm</code> have been compiled with plugin support.  At link time, use the the
+and <code>nm</code> have been compiled with plugin support.  At link time, use the
 flag <samp>-fuse-linker-plugin</samp> to ensure that the library participates in
 the LTO optimization process:
 </p>

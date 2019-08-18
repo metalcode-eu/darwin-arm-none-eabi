@@ -1,3 +1,12 @@
+### Version 0.1.8
+Version 8-2019-q3-update
+Released: July 10, 2019
+
+Open On-Chip Debugger 0.10.0+dev-00924-g16496488 (2019-08-18-14:31)
+Comment I used: 
+brew install --HEAD open-ocd 
+The HEAD was needed for the PSoC4, PSoC5LP and PSoC6 target scripts.  
+
 ### Version 0.1.7
 Added Open On-Chip Debugger 0.10.0+dev-1.0.0.226 (2018-11-09-17:51) 
 
