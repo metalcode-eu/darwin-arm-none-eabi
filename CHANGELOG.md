@@ -1,4 +1,4 @@
-### Version 0.1.8
+### Version 0.1.9
 Version 8-2019-q3-update
 Released: July 10, 2019
 
