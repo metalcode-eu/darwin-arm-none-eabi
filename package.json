@@ -54,7 +54,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/open-ocd/HEAD-1649648/bin/openocd",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/openocd-2.1/bin/openocd",
           "description": "The path to the Open On-Chip Debugger."
         },
         "openocd.scripts": {
@@ -62,7 +62,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/open-ocd/HEAD-1649648/share/openocd/scripts",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.1.9/openocd-2.1/scripts",
           "description": "The path to the Open On-Chip Debugger scripts directory."
         }
       }
