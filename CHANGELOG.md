@@ -1,13 +1,18 @@
+
+### Version 0.2.0
+Open On-Chip Debugger version for PSoC6.
+
+[Cypress Programmer (CYP) 2.1](https://raw.githubusercontent.com/metalcode-eu/darwin-arm-none-eabi/master/openocd-2.1/docs/Cypress_Programmer_2_1_CLI_User_Guide.pdf)
+
 ### Version 0.1.9
 Version 8-2019-q3-update
 Released: July 10, 2019
 
-Removed OpenOCD. Use homebrew to install openocd.
 
 ### Version 0.1.7
 Added Open On-Chip Debugger 0.10.0+dev-1.0.0.226 (2018-11-09-17:51) 
 
-### Version 0.1.6
+### Version 0.1.6 
 Version 8-2018-q4-major for macOS 
 Released: December 20, 2018
 

@@ -28,7 +28,7 @@ tasks.json.
 - arm-none-eabi.include
 - arm-none-eabi.lib
 - arm-none-eabi.libgcc
-- openocd
+- openocd.bin
 - openocd.scripts
 
 Here is an example of tasks.json for GNU make. 
@@ -90,11 +90,19 @@ test:
 
 ## Release Notes
 
+### Version 0.2.0
+Open On-Chip Debugger version for PSoC6.
+
+[Cypress Programmer (CYP) 2.1](https://raw.githubusercontent.com/metalcode-eu/darwin-arm-none-eabi/master/openocd-2.1/docs/Cypress_Programmer_2_1_CLI_User_Guide.pdf)
+
+Run the shell script in the terminal to set symbolic links to the toolchain.  
+```bash
+./symlink.sh 
+```
+
 ### Version 0.1.9
 Version 8-2019-q3-update
 Released: July 10, 2019
-
-Open OCD version for PSoC. 
 
 ### Version 0.1.7
 Added Open On-Chip Debugger 0.10.0+dev-1.0.0.226 (2018-11-09-17:51) 
