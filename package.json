@@ -3,7 +3,7 @@
   "displayName": "darwin-arm-none-eabi",
   "description": "GNU Arm embedded toolchain for macOS",
   "icon": "images/gcc-darwin-128x128.png",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "preview": true,
   "publisher": "metalcode-eu",
   "engines": {
@@ -22,7 +22,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/bin",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/bin",
           "description": "The path to the GNU toolchain."
         },
         "arm-none-eabi.include": {
@@ -30,7 +30,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/arm-none-eabi/include",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/arm-none-eabi/include",
           "description": "The path to the GCC header files."
         },
         "arm-none-eabi.lib": {
@@ -38,7 +38,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/arm-none-eabi/lib",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/arm-none-eabi/lib",
           "description": "The path to the GCC library files."
         },
         "arm-none-eabi.libgcc": {
@@ -46,7 +46,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/lib/gcc/arm-none-eabi/8.3.1",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/lib/gcc/arm-none-eabi/9.3.1",
           "description": "The path to the libgcc files."
         },
         "openocd.bin": {
@@ -54,7 +54,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/openocd-2.1/bin",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/openocd-2.1/bin",
           "description": "The path to the Open On Chip Debugger."
         },
         "openocd.script": {
@@ -62,7 +62,7 @@
             "string",
             "null"
           ],
-          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.0/openocd-2.1/scripts",
+          "default": "${env:HOME}/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-0.2.1/openocd-2.1/scripts",
           "description": "The path to the Open On Chip Debugger scripts."
         }
       }
@@ -77,6 +77,6 @@
     "postinstall": "./symlink.sh && node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
-    "@types/vscode": "^1.37.0"
+    "@types/vscode": "^1.48.0"
   }
 }

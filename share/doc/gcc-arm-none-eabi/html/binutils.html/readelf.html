@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- Copyright (C) 1991-2019 Free Software Foundation, Inc.
+<!-- Copyright (C) 1991-2020 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -96,6 +96,10 @@ Next: <a href="elfedit.html#elfedit" accesskey="n" rel="next">elfedit</a>, Previ
          <samp>--debug-dump</samp>[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,=frames,=frames-interp,=str,=loc,=Ranges,=pubtypes,=trace_info,=trace_abbrev,=trace_aranges,=gdb_index,=addr,=cu_index,=links,=follow-links]]
         [<samp>--dwarf-depth=<var>n</var></samp>]
         [<samp>--dwarf-start=<var>n</var></samp>]
+        [<samp>--ctf=</samp><var>section</var>]
+        [<samp>--ctf-parent=</samp><var>section</var>]
+        [<samp>--ctf-symbols=</samp><var>section</var>]
+        [<samp>--ctf-strings=</samp><var>section</var>]
         [<samp>-I</samp>|<samp>--histogram</samp>]
         [<samp>-v</samp>|<samp>--version</samp>]
         [<samp>-W</samp>|<samp>--wide</samp>]
@@ -342,8 +346,8 @@ output from this option can also be restricted by the use of the
 <dt><code>k</code></dt>
 <dt><code>=links</code></dt>
 <dd><p>Displays the contents of the &lsquo;<samp>.gnu_debuglink</samp>&rsquo; and/or
-&lsquo;<samp>.gnu_debugaltlink</samp>&rsquo; sections.  Also displays the link to a
-separate dwarf object file (dwo), if one is specified by the 
+&lsquo;<samp>.gnu_debugaltlink</samp>&rsquo; sections.  Also displays any links to
+separate dwarf object files (dwo), if they are specified by the 
 DW_AT_GNU_dwo_name or DW_AT_dwo_name attributes in the
 &lsquo;<samp>.debug_info</samp>&rsquo; section.
 </p>
@@ -351,10 +355,9 @@ DW_AT_GNU_dwo_name or DW_AT_dwo_name attributes in the
 <dt><code>K</code></dt>
 <dt><code>=follow-links</code></dt>
 <dd><p>Display the contents of any selected debug sections that are found in
-a linked, separate debug info file.  This can result in multiple
-versions of the same debug section being displayed if both the main
-file and the separate debug info file contain sections with the same
-name.
+linked, separate debug info file(s).  This can result in multiple
+versions of the same debug section being displayed if it exists in
+more than one file.
 </p>
 <p>In addition, when displaying DWARF attributes, if a form is found that
 references the separate debug info file, then the referenced contents
@@ -456,6 +459,31 @@ siblings and children of the specified DIE will be printed.
 <p>This can be used in conjunction with <samp>--dwarf-depth</samp>.
 </p>
 
+
+</dd>
+<dt><code>--ctf=<var>section</var></code></dt>
+<dd><a name="index-CTF-1"></a>
+<a name="index-Compact-Type-Format-1"></a>
+
+<p>Display the contents of the specified CTF section.  CTF sections themselves
+contain many subsections, all of which are displayed in order.
+</p>
+</dd>
+<dt><code>--ctf-parent=<var>section</var></code></dt>
+<dd>
+<p>Specify the name of another section from which the CTF dictionary can inherit
+types.  (If none is specified, we assume the CTF dictionary inherits types
+from the default-named member of the archive contained within this section.)
+</p></dd>
+<dt><code>--ctf-symbols=<var>section</var></code></dt>
+<dt><code>--ctf-strings=<var>section</var></code></dt>
+<dd><p>Specify the name of another section from which the CTF file can inherit
+strings and symbols.  By default, the <code>.symtab</code> and its linked
+string table are used.
+</p>
+<p>If either of <samp>--ctf-symbols</samp> or <samp>--ctf-strings</samp> is specified, the
+other must be specified as well.
+</p>
 </dd>
 <dt><code>-I</code></dt>
 <dt><code>--histogram</code></dt>

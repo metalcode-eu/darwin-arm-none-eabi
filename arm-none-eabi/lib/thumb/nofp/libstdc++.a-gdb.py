@@ -1,5 +1,5 @@
 # -*- python -*-
-# Copyright (C) 2009-2018 Free Software Foundation, Inc.
+# Copyright (C) 2009-2019 Free Software Foundation, Inc.
 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/tmp/jenkins-GCC-8-build-toolchain-mac_LSF-72_20190704_1562200948/install-native/share/gcc-arm-none-eabi'
-libdir = '/tmp/jenkins-GCC-8-build-toolchain-mac_LSF-72_20190704_1562200948/install-native/arm-none-eabi/lib/thumb/nofp'
+pythondir = '/tmp/jenkins-GCC-9-pipeline-200_20200521_1590053285/install-native/share/gcc-arm-none-eabi'
+libdir = '/tmp/jenkins-GCC-9-pipeline-200_20200521_1590053285/install-native/arm-none-eabi/lib/thumb/nofp'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

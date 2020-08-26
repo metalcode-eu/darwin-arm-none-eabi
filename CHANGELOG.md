@@ -1,3 +1,6 @@
+### Version 0.2.1
+Version 9-2020-q2-update
+Released: June 30, 2020
 
 ### Version 0.2.0
 Open On-Chip Debugger version for PSoC6.

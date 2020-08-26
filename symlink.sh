@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create symlinks for GNU Arm embedded toolchain for macOS
-VERSION=0.2.0
+VERSION=0.2.1
 PACKAGE=~/.vscode/extensions/metalcode-eu.darwin-arm-none-eabi-${VERSION}
 TOOLCHAIN=${PACKAGE}/bin
 CROSS=arm-none-eabi-
